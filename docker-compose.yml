@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16 # 使用最新的 PostgreSQL 版本
+    container_name: postgres_db
+    ports:
+      - '5432:5432' # 映射容器的 Port 5432 到本機的 Port 5432
+    environment:
+      POSTGRES_USER: test_name
+      POSTGRES_PASSWORD: test_password
+      POSTGRES_DB: test_database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
