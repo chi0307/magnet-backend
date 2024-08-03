@@ -8,7 +8,7 @@ export const AppDataSource = new DataSource({
   password: 'test_password',
   database: 'test_database',
   entities: [__dirname + '/**/*.entity.ts'],
-  migrations: [__dirname + '/migrations/*{.ts}'],
+  migrations: [__dirname + '/../migrations/*.ts'],
   synchronize: false,
 })
 
