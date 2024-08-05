@@ -6,6 +6,7 @@ import { AppDataSource } from './data-source'
 import { UserInfoModule } from './user-info/user-info.module'
 import { LedgerInfoModule } from './ledger-info/ledger-info.module'
 import { PurchaseInfoModule } from './purchase-info/purchase-info.module'
+import { CategoryInfoModule } from './category-info/category-info.module'
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { PurchaseInfoModule } from './purchase-info/purchase-info.module'
     UserInfoModule,
     LedgerInfoModule,
     PurchaseInfoModule,
+    CategoryInfoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
