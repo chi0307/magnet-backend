@@ -7,8 +7,8 @@ export class CreateInitialTables1675292827048 implements MigrationInterface {
         "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
         "name" varchar(100) NOT NULL,
         "email" varchar(100) NOT NULL,
-        "created_at" timestamp NOT NULL DEFAULT now(),
-        "update_at" timestamp NOT NULL DEFAULT now(),
+        "created_at" timestamptz NOT NULL DEFAULT now(),
+        "update_at" timestamptz NOT NULL DEFAULT now(),
         PRIMARY KEY ("id")
       );
 
@@ -18,7 +18,7 @@ export class CreateInitialTables1675292827048 implements MigrationInterface {
         "name" varchar(100) NOT NULL,
         "is_default" bool DEFAULT false,
         "is_visible_in_general" bool DEFAULT true,
-        "created_at" timestamp NOT NULL DEFAULT now(),
+        "created_at" timestamptz NOT NULL DEFAULT now(),
         "updated_at" timestamptz NOT NULL DEFAULT now(),
         PRIMARY KEY ("id")
       );
@@ -29,9 +29,9 @@ export class CreateInitialTables1675292827048 implements MigrationInterface {
         "user_info_id" uuid NOT NULL,
         "description" varchar(255) NOT NULL,
         "amount" decimal(10,2) NOT NULL,
-        "purchase_date" timestamptz NOT NULL,
-        "created_at" timestamp NOT NULL,
-        "updated_at" timestamp NOT NULL,
+        "purchase_date" timestamptz NOT NULL DEFAULT now(),
+        "created_at" timestamptz NOT NULL DEFAULT now(),
+        "updated_at" timestamptz NOT NULL DEFAULT now(),
         PRIMARY KEY ("id")
       );
 
