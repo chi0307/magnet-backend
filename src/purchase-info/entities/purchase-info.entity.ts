@@ -14,13 +14,13 @@ export class PurchaseInfo {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @ManyToOne(() => LedgerInfo, { onDelete: 'CASCADE' })
+  @ManyToOne(() => LedgerInfo)
   ledger_info: LedgerInfo
 
-  @ManyToOne(() => UserInfo, { onDelete: 'CASCADE' })
+  @ManyToOne(() => UserInfo)
   user_info: UserInfo
 
-  @Column({ length: 255 })
+  @Column({ length: 1000 })
   description: string
 
   @Column('decimal', { precision: 10, scale: 2 })

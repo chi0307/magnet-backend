@@ -13,7 +13,7 @@ export class LedgerInfo {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @ManyToOne(() => UserInfo, { onDelete: 'CASCADE' })
+  @ManyToOne(() => UserInfo)
   user_info: UserInfo
 
   @Column({ length: 100 })
