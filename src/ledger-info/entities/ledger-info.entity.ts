@@ -25,7 +25,7 @@ export class LedgerInfo {
   @Column({ default: true })
   is_visible_in_general: boolean
 
-  @Column({ length: 3, default: 'TWD' })
+  @Column({ length: 3 })
   currency: string
 
   @CreateDateColumn()

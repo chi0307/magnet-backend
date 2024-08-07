@@ -28,7 +28,7 @@ export class CreateInitialTables1675292827048 implements MigrationInterface {
         "name" varchar(100) NOT NULL,
         "is_default" bool DEFAULT false,
         "is_visible_in_general" bool DEFAULT true,
-        "currency" varchar(3) NOT NULL DEFAULT TWD,
+        "currency" varchar(3) NOT NULL,
         "created_at" timestamptz NOT NULL DEFAULT now(),
         "updated_at" timestamptz NOT NULL DEFAULT now(),
         PRIMARY KEY ("id")
