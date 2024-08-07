@@ -14,6 +14,9 @@ export class CategoryInfo {
   @ManyToOne(() => LedgerInfo)
   ledger_info: LedgerInfo
 
+  @Column({ length: 100 })
+  name: string
+
   @Column({ length: 2, default: '0' })
   currency: string
 
