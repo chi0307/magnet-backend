@@ -7,8 +7,7 @@ import {
   ManyToOne,
 } from 'typeorm'
 import { LedgerInfo } from '../../ledger-info/entities/ledger-info.entity'
-import { UserInfo } from '../../user-info/entities/user-info.entity'
-import { CategoryInfo } from 'src/category-info/entities/category-info.entity'
+import { CategoryInfo } from '../../category-info/entities/category-info.entity'
 
 @Entity('purchase_info')
 export class PurchaseInfo {
@@ -18,14 +17,11 @@ export class PurchaseInfo {
   @ManyToOne(() => LedgerInfo)
   ledger_info: LedgerInfo
 
-  @ManyToOne(() => UserInfo)
-  user_info: UserInfo
-
   @ManyToOne(() => CategoryInfo)
   category_info: CategoryInfo
 
-  @Column({ length: 1000 })
-  description: string
+  @Column({ length: 100, nullable: true })
+  name: string
 
   @Column('decimal', { precision: 10, scale: 2 })
   amount: number

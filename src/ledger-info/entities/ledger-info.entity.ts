@@ -19,12 +19,6 @@ export class LedgerInfo {
   @Column({ length: 100 })
   name: string
 
-  @Column({ default: false })
-  is_default: boolean
-
-  @Column({ default: true })
-  is_visible_in_general: boolean
-
   @Column({ length: 3 })
   currency: string
 
