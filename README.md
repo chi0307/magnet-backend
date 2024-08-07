@@ -41,3 +41,9 @@ $ pnpm run test:cov
 ```bash
 $ nest g resource XXX
 ```
+
+## generate migration
+
+```bash
+$ FILE=XXX pnpm run migration:generate
+```
